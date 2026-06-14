@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World - Weather in Rochester, NY</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            width: 100%;
+        }
+
+        .scrolling-text {
+            font-size: 80px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+            white-space: nowrap;
+            overflow: hidden;
+            margin: 20px 0;
+            padding: 20px;
+        }
+
+        .scroll-horizontal {
+            animation: scroll-left 8s linear infinite;
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .weather-forecast {
+            font-size: 50px;
+            font-weight: bold;
+            color: #ffeb3b;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            white-space: nowrap;
+            overflow: hidden;
+            margin: 20px 0;
+            padding: 20px;
+            animation: scroll-left 15s linear infinite;
+        }
+
+        .forecast-item {
+            display: inline-block;
+            margin-right: 40px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="scrolling-text scroll-horizontal">
+            Hello World! 🌍
+        </div>
+
+        <div class="weather-forecast">
+            <span class="forecast-item">📅 June 14: 81°F / 61°F - Overcast, Patchy Drizzle</span>
+            <span class="forecast-item">📅 June 15: 62°F / 49°F - Cloudy → Sunny</span>
+            <span class="forecast-item">📅 June 16: 70°F / 52°F - Sunny → Patchy Rain</span>
+        </div>
+    </div>
+</body>
+</html>
