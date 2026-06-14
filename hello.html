@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World - Weather in Rochester, NY</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            width: 100%;
+        }
+
+        .scrolling-text {
+            font-size: 80px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+            white-space: nowrap;
+            overflow: hidden;
+            margin: 20px 0;
+            padding: 20px;
+        }
+
+        .scroll-horizontal {
+            animation: scroll-left 8s linear infinite;
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .weather-text {
+            font-size: 60px;
+            font-weight: bold;
+            color: #ffeb3b;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .scroll-horizontal-slow {
+            animation: scroll-left 10s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="scrolling-text scroll-horizontal">
+            Hello World! 🌍
+        </div>
+
+        <div class="scrolling-text scroll-horizontal-slow weather-text">
+            Weather in Rochester, NY: 71°F and Cloudy ☁️
+        </div>
+    </div>
+</body>
+</html>

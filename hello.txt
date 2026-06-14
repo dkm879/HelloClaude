@@ -1,0 +1,3 @@
+Hello!
+
+The weather in Rochester, NY is currently cloudy with a temperature of 71°F.
