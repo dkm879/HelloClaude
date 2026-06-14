@@ -50,15 +50,24 @@
             }
         }
 
-        .weather-text {
-            font-size: 60px;
+        .weather-forecast {
+            font-size: 50px;
             font-weight: bold;
             color: #ffeb3b;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            white-space: nowrap;
+            overflow: hidden;
+            margin: 20px 0;
+            padding: 20px;
+            animation: scroll-left 15s linear infinite;
         }
 
-        .scroll-horizontal-slow {
-            animation: scroll-left 10s linear infinite;
+        .forecast-item {
+            display: inline-block;
+            margin-right: 40px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -68,8 +77,10 @@
             Hello World! 🌍
         </div>
 
-        <div class="scrolling-text scroll-horizontal-slow weather-text">
-            Weather in Rochester, NY: 71°F and Cloudy ☁️
+        <div class="weather-forecast">
+            <span class="forecast-item">📅 June 14: 81°F / 61°F - Overcast, Patchy Drizzle</span>
+            <span class="forecast-item">📅 June 15: 62°F / 49°F - Cloudy → Sunny</span>
+            <span class="forecast-item">📅 June 16: 70°F / 52°F - Sunny → Patchy Rain</span>
         </div>
     </div>
 </body>
